@@ -19,7 +19,7 @@ class KotlinDemo : AppCompatActivity() {
   private var customHandler: CustomHandler? = null
   // Lazy init
   private val lazyTv: TextView by lazy(LazyThreadSafetyMode.NONE) {
-    findViewById(R.id.lazy_tv) as TextView
+    findViewById<TextView>(R.id.lazy_tv)
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class KotlinDemo : AppCompatActivity() {
   override fun onResume() {
     super.onResume()
     title_tv.text = "This is good" // instead of .setText()
-    val messageTv = findViewById(R.id.message_tv) as TextView
+    val messageTv = findViewById<TextView>(R.id.message_tv)
     messageTv.text = "Without extension"
     lazyTv.text = "So lazy"
 

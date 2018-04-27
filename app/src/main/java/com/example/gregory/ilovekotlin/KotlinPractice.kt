@@ -114,7 +114,6 @@ class KotlinPractice {
     val rightShiftX = x shr 1
     // final int leftShiftY = y << 1;
     val leftShiftY = y shl 1
-
     println(andResult.toString())
     println(orResult.toString())
     println(xorResult.toString())
